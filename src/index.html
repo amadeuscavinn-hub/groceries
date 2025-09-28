@@ -5,9 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link href="./output.css" rel="stylesheet"> -->
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
+   <style>
+
+    @keyframes appear{
+      from{
+        opacity: 0;
+        /* scale: 0.5; */
+      }
+      to{
+        opacity: 1;
+        /* scale: 1; */
+      }
+    }
+    @keyframes appearR{
+      from{
+        opacity: 0;
+        transform: translateX(700px);
+      }
+      to{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+     @keyframes appearL{
+      from{
+        opacity: 0;
+        transform: translateX(-700px);
+      }
+      to{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+    @keyframes appearB{
+      from{
+        opacity: 0;
+        transform: translateY(-80px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+   @keyframes appearT{
+      from{
+        opacity: 0;
+        transform: translateY(200px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    .appear_right{
+      animation: appearR linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 52%;
+    }
+
+    .appear_left{
+      animation: appearL linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 52%;
+    }
+
+    .appear_bot{
+      animation: appearB linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 30%;
+    }
+
+    .appear{
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 30%;
+    }
+    .appear_top{
+      animation: appearT linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 55%;
+    }
+   </style>
 </head>
 <body> 
-  <div class="min-h-screen bg-[url('/images/image.png')] bg-center bg-cover  px-28 py-5 relative">
+  <div class="min-h-screen bg-[url('/images/image.png')] bg-center bg-cover  px-28 py-5 relative max-sm:px-15">
     <nav class="flex items-center">
       <img src="/images/logo.png" class="w-40 cursor-pointer">
       <ul class="flex-1 text-center">
@@ -34,48 +122,51 @@
 
 
   <div class="min-h-full bg-slate-950 pb-50">
-    <div class="flex flex-row pt-35 mx-30 justify-between max-xl:flex-col">
-      <div class="relative top-15">
+    <div class="flex flex-row pt-35 mx-30 justify-between max-xl:flex-col text-center max-sm:mx-15 appear_bot">
+      <div class="relative top-15 max-xl:text-center appear_bot ">
         <h1 class="font-bold text-6xl text-white md:justify-center">Fresh <span class="text-yellow-400">Variety</span></h1>
-        <p class="mt-10 max-w-xl text-white">From daily essentials to seasonal picks, everything we deliver is chosen with freshness in mind. Enjoy quality groceries that arrive just the way you want them — crisp, clean, and full of flavor. Get the freshest fruits delivered straight to your doorstep. From local favorites to exotic varieties, we make grocery shopping easy, fast, and reliable. </p>
-        <div class="flex mt-20 md:justify-center">
-          <a href="#" class="text-white bg-yellow-400 py-2 px-5 rounded-2xl text-4xl font-semibold hover:bg-yellow-600 duration-300 inset-shadow-sm inset-shadow-slate-950 ">Explore</a>
+        <p class="mt-10  text-white">From daily essentials to seasonal picks, everything we deliver is chosen with freshness in mind. Enjoy quality groceries that arrive just the way you want them — crisp, clean, and full of flavor. Get the freshest fruits delivered straight to your doorstep. From local favorites to exotic varieties, we make grocery shopping easy, fast, and reliable. </p>
+        <div class="mt-20">
+          <a href="#" class=" text-white bg-yellow-400 py-2 px-5 rounded-2xl text-4xl font-semibold hover:bg-yellow-600 duration-300 inset-shadow-sm inset-shadow-slate-950 ">Explore</a>
         </div>
       </div>
-      <img src="/images/fruits1.png" class="w-full xl:w-1/2 max-xl:mt-30">
+      <img src="/images/fruits1.png" class="w-full xl:w-1/2 max-xl:mt-30 appear max-w-xl mx-auto">
     </div>
 
 
-    <div class="flex flex-row pt-35 mx-30 justify-between max-xl:flex-col">
-      <img src="/images/coureer.png" class="w-full xl:w-1/2 max-xl:mt-30">
-      <div class="relative top-15">
-        <h1 class="font-bold text-6xl text-white">Fast and <span class="text-yellow-400">Reliable</span></h1>
-        <p class="mt-10 max-w-xl text-white">We keep grocery delivery hassle-free. Once you order, our team prepares everything carefully and ensures it reaches you quickly and safely. From checkout to doorstep, we’ve designed a smooth and reliable delivery procedure so your groceries always arrive fresh and on time</p>
+    <div class="flex flex-row pt-35 mx-30 justify-between max-xl:flex-col text-center max-sm:mx-15">
+      <img src="/images/coureer.png" class="w-full xl:w-1/2 max-xl:mt-30 appear max-w-xl mx-auto">
+      <div class="relative top-15 max-xl:text-center appear_bot">
+        <h1 class="font-bold text-6xl text-white max-xl:justify-center">Fast and <span class="text-yellow-400">Reliable</span></h1>
+        <p class="mt-10 text-white">We keep grocery delivery hassle-free. Once you order, our team prepares everything carefully and ensures it reaches you quickly and safely. From checkout to doorstep, we’ve designed a smooth and reliable delivery procedure so your groceries always arrive fresh and on time</p>
         <div class="mt-20">
           <a href="#" class="text-white bg-yellow-400 py-2 px-5 rounded-2xl text-4xl font-semibold hover:bg-yellow-600 duration-300 inset-shadow-sm inset-shadow-slate-950">Learn More</a>
         </div>
       </div>
     </div>
 
-      <div class="flex flex-row pt-35 mx-30 justify-between max-xl:flex-col">
-      <div class="relative top-15">
-        <h1 class="font-bold text-6xl text-white">Great <span class="text-yellow-400">Value</span></h1>
-        <p class="mt-10 max-w-xl text-white">Shop smarter with prices that fit your budget. We bring you the freshest groceries at affordable rates, so quality never means paying more. Save more on every order with our regular deals. Great groceries, great savings — delivered straight to your door. </p>
+    <div class="flex flex-row pt-35 mx-30 justify-between max-xl:flex-col max-xl:pt-50 max-sm:mx-15 text-center">
+      <div class="relative top-15  appear_bot">
+        <h1 class="font-bold text-6xl text-white appear_bot">Great <span class="text-yellow-400">Value</span></h1>
+        <p class="mt-10 text-white">Shop smarter with prices that fit your budget. We bring you the freshest groceries at affordable rates, so quality never means paying more. Save more on every order with our regular deals. Great groceries, great savings — delivered straight to your door. </p>
         <div class="mt-20">
           <a href="#" class="text-white bg-yellow-400 py-2 px-5 rounded-2xl text-4xl font-semibold hover:bg-yellow-600 duration-300 inset-shadow-sm inset-shadow-slate-950">Start Saving</a>
         </div>
       </div>
-      <img src="/images/Saving.png" class="w-full xl:w-1/2 max-xl:mt-30">
+      <img src="/images/Saving.png" class="w-full xl:w-1/2 max-xl:mt-30 appear max-w-xl mx-auto">
     </div>
 
 
     <div class=" mt-40 mx-20 rounded-2xl pb-30"></div>
     
-      <h1 class="font-bold text-7xl text-center pt-10 text-white">OUR <span class="text-yellow-400 max-[md]:text-2xl">PROCESS</span></h1>
-      <p class="pt-5 px-40 text-center text-white max-md:text-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="flex flex-row justify-between gap-6 px-20 pt-10 max-md:flex-col">
-        <div class="bg-red-800 w-xl hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:shadow-yellow-300 hover:scale-103 duration-300 max-md:w-112"> 
-          <div class="w-md h-80 bg-[url('/images/shophome.jpg')] bg-cover relative">
+      <h1 class="font-bold text-7xl text-center pt-10 text-white max-sm:text-6xl appear_bot">OUR <span class="text-yellow-400 max-[md]:text-2xl">PROCESS</span></h1>
+      <p class="pt-5 px-40 text-center text-white max-md:text-md max-md:px-20 appear_bot">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+      <div class="flex flex-row justify-between gap-6 px-20 pt-10 max-xl:flex-col max-xl:align-middle max-xl:justify-center max-xl:items-center appear_bot">
+      
+      
+        <div class="bg-red-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:shadow-yellow-300 hover:scale-103 duration-300 w-md max-xl:w-2xl max-md:w-xl max-sm:w-sm"> 
+          <div class="h-80 bg-[url('/images/shophome.jpg')] bg-cover relative ">
             <div class="w-full h-20 bg-black/50 absolute bottom-0 font-semibold text-4xl"><p class="p-5 text-yellow-600">Browse & <span class="text-yellow-400">Order</span></p></div>
           </div>
           <div class="bg-black text-sm pb-10">
@@ -83,8 +174,8 @@
           </div>
         </div>
         
-        <div class="bg-red-800 w-xl hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:shadow-yellow-300 hover:scale-103 duration-300"> 
-          <div class="w-md h-80 bg-[url('/images/Packaging.jpg')] bg-cover relative">
+        <div class="bg-red-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:shadow-yellow-300 hover:scale-103 duration-300 w-md max-xl:w-2xl max-md:w-xl max-sm:w-sm"> 
+          <div class="h-80 bg-[url('/images/Packaging.jpg')] bg-cover relative">
             <div class="w-full h-20 bg-black/50 absolute bottom-0 font-semibold text-4xl"><p class="p-5 text-yellow-600">Packed With <span class="text-yellow-400">Care</span></p></div>
           </div>
           <div class="bg-black text-sm pb-10">
@@ -92,8 +183,8 @@
           </div>
         </div>
 
-        <div class="bg-red-800 w-xl hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:shadow-yellow-300 hover:scale-103 duration-300"> 
-          <div class="w-md h-80 bg-[url('/images/Delivery.jpg')] bg-cover relative">
+        <div class="bg-red-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:shadow-yellow-300 hover:scale-103 duration-300 w-md max-xl:w-2xl max-md:w-xl max-sm:w-sm "> 
+          <div class="h-80 bg-[url('/images/Delivery.jpg')] bg-cover relative ">
             <div class="w-full h-20 bg-black/50 absolute bottom-0 font-semibold text-4xl"><p class="p-5 text-yellow-600">Delivered <span class="text-yellow-400">Fresh</span></p></div>
           </div>
           <div class="bg-black text-sm pb-10">
@@ -104,42 +195,42 @@
     </div>
 
 
-    <div class="flex flex-row bg-black px-40 py-15 justify-between">
+    <div class="flex flex-row bg-black px-40 py-15 justify-between max-xl:px-20 max-md:flex-col max-md:text-center max-md:items-center max-md:justify-center max-md:align-middle">
       
-      <div class="text-white">
+      <div class="text-white max-sm:pb-15">
         <h1 class="text-xl font-bold text-yellow-400">Company</h1>
-        <hr class="text-white w-10 pb-5 mt-2">
-        <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">About Us</h1>
-        <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Our Services</h1>
-        <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Privacy Policy</h1>
+        <hr class="text-white w-10 pb-5 mt-2 max-sm:w-35">
+        <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">About Us</h1>
+        <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Our Services</h1>
+        <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Privacy Policy</h1>
         <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Affiliate Program</h1>
       </div>
       
 
  
-      <div class="text-white">
+      <div class="text-white max-sm:pb-15">
           <h1 class="text-xl font-bold text-yellow-400">Get Help</h1>
-          <hr class="text-white w-10 pb-5 mt-2">
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">FAQ</h1>
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Shipping</h1>
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Returns</h1>
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Order Status</h1>
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Payment Option</h1>  
+          <hr class="text-white w-10 pb-5 mt-2 max-sm:w-35">
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">FAQ</h1>
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Shipping</h1>
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Returns</h1>
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Order Status</h1>
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Payment Option</h1>  
       </div>
 
 
-      <div class="text-white">
+      <div class="text-white max-sm:pb-15">
           <h1 class="text-xl font-bold text-yellow-400">About Us</h1>
-          <hr class="text-white w-10 pb-5 mt-2">
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Our Goals</h1>
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Our Vision</h1>
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Our Profile</h1>
-          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer">Support Us</h1>  
+          <hr class="text-white w-10 pb-5 mt-2 max-sm:w-35">
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Our Goals</h1>
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Our Vision</h1>
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Our Profile</h1>
+          <h1 class="font-sm p-0.5  hover:text-yellow-400 hover:font-bold cursor-pointer duration-300">Support Us</h1>  
       </div>
 
-      <div class="text-white">
-          <h1 class="text-xl font-bold text-yellow-400">Follow Us</h1>
-          <hr class="text-white w-10 pb-5 mt-2">
+      <div class="text-white max-sm:pb-15 ">
+          <h1 class="text-xl font-bold text-yellow-400 ">Follow Us</h1>
+          <hr class="text-white w-10 pb-5 mt-2 max-sm:w-35">
           <div></div>
       </div>
    
